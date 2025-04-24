@@ -1,0 +1,91 @@
+{
+    "route_name": "Route 6_2: Circular Path",
+    "description": "Flight path going Circular Path for 5 minutes.",
+    "waypoints": [
+        {
+            "lat": 47.3987931,
+            "lon": 8.5457165,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3985071,
+            "lon": 8.5464407,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3979624,
+            "lon": 8.5473662,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3971862,
+            "lon": 8.5471449,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3969410,
+            "lon": 8.5461993,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3969819,
+            "lon": 8.5446904,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3976900,
+            "lon": 8.5443082,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3986569,
+            "lon": 8.5440064,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3988885,
+            "lon": 8.5447508,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3992289,
+            "lon": 8.5453744,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3992834,
+            "lon": 8.5471650,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3986978,
+            "lon": 8.5478893,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3978807,
+            "lon": 8.5481910,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3969683,
+            "lon": 8.5477082,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3965869,
+            "lon": 8.5470242,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3964371,
+            "lon": 8.5458171,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3965052,
+            "lon": 8.5442076,
+            "elevation": 20
+        }
+    ]
+}

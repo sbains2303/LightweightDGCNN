@@ -1,0 +1,41 @@
+{
+    "route_name": "Route 32_2: Neighbourhood delivery",
+    "description": "Neighbourhood flight path for 5 minutes.",
+    "waypoints": [
+        {
+            "lat": 47.3939711,
+            "lon": 8.5434726,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3943310,
+            "lon": 8.5421791,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3950373,
+            "lon": 8.5412721,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3954796,
+            "lon": 8.5447019,
+            "elevation": 20
+        },
+        {
+            "lat":47.3961593,
+            "lon": 8.5420100,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3957487,
+            "lon": 8.5435090,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3977539,
+            "lon": 8.5452578,
+            "elevation": 20
+        }
+    ]
+}

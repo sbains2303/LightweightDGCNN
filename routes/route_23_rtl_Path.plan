@@ -1,0 +1,61 @@
+{
+    "route_name": "Route 23: Return To Launch",
+    "description": "Return flight path for 5 minutes.",
+    "waypoints": [
+        {
+            "lat": 47.3988973,
+            "lon": 8.5466882,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3977631,
+            "lon": 8.5459644,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3978720,
+            "lon": 8.5484659,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3979226,
+            "lon": 8.5461498,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3988800,
+            "lon": 8.5453867,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3981389,
+            "lon": 8.5461072,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3983276,
+            "lon": 8.5446311,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3981850,
+            "lon": 8.5458277,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3975928,
+            "lon": 8.5443925,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3981110,
+            "lon": 8.5455953,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3965473,
+            "lon": 8.5447068,
+            "elevation": 20
+        }
+    ]
+}

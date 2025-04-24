@@ -1,0 +1,46 @@
+{
+    "route_name": "Route 31: Transport delivery",
+    "description": "Transport flight path for 5 minutes.",
+    "waypoints": [
+        {
+            "lat": 47.3995502,
+            "lon": 8.5456524,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3977308,
+            "lon": 8.5453800,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3995120,
+            "lon": 8.5456919,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3978367,
+            "lon": 8.5455582,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3995272,
+            "lon": 8.5455358,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3978216,
+            "lon": 8.5455136,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3995574,
+            "lon": 8.5456027,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3978367,
+            "lon": 8.5457142,
+            "elevation": 20
+        }
+    ]
+}

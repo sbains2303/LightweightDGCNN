@@ -1,0 +1,36 @@
+{
+    "route_name": "Route 14: Zigzag Path",
+    "description": "Flight path going Zigzag Path for 5 minutes.",
+    "waypoints": [
+        {
+            "lat": 47.3988886,
+            "lon": 8.5437632,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3988572,
+            "lon": 8.5463441,
+            "elevation": 20
+        },
+        {
+            "lat": 47.4000683,
+            "lon": 8.5443234,
+            "elevation": 20
+        },
+        {
+            "lat":47.4000767,
+            "lon": 8.5469903,
+            "elevation": 20
+        },
+        {
+            "lat": 47.4015764,
+            "lon": 8.5449679,
+            "elevation": 20
+        },
+        {
+            "lat": 47.4017837,
+            "lon": 8.5495229,
+            "elevation": 20
+        }
+    ]
+}

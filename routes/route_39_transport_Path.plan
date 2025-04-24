@@ -1,0 +1,26 @@
+{
+    "route_name": "Route 39: Transport delivery",
+    "description": "Transport flight path for 5 minutes.",
+    "waypoints": [
+        {
+            "lat": 47.3985540,
+            "lon": 8.5405015,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3977308,
+            "lon": 8.5453800,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3984706,
+            "lon": 8.5406525,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3977914,
+            "lon": 8.5451345,
+            "elevation": 20
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "route_name": "Route 16_2: Random Path",
+    "description": "Random flight path for 5 minutes.",
+    "waypoints": [
+        {
+            "lat": 47.3996623,
+            "lon": 8.5418074,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3994372,
+            "lon": 8.5396416,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3981240,
+            "lon": 8.5405900,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3987026,
+            "lon": 8.5427337,
+            "elevation": 20
+        },
+        {
+            "lat": 47.4007703,
+            "lon": 8.5426862,
+            "elevation": 20
+        },
+        {
+            "lat": 47.4005725,
+            "lon": 8.5394423,
+            "elevation": 20
+        },
+        {
+            "lat": 47.4023672,
+            "lon": 8.5395205,
+            "elevation": 20
+        }
+    ]
+}

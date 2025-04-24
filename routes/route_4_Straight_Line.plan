@@ -1,0 +1,11 @@
+{
+    "route_name": "Route 4: Straight Line",
+    "description": "Flight path going Straight Line for 5 minutes.",
+    "waypoints": [
+        {
+            "lat": 47.3976623,
+            "lon": 8.5266275,
+            "elevation": 20
+        }
+    ]
+}

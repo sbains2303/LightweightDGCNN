@@ -1,0 +1,21 @@
+{
+    "route_name": "Route 27: Payload delivery",
+    "description": "Payload flight path for 5 minutes.",
+    "waypoints": [
+        {
+            "lat": 47.3987420,
+            "lon": 8.5443463,
+            "elevation": 20
+        },
+        {
+            "lat": 47.4043748,
+            "lon": 8.5457695,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3979242,
+            "lon": 8.5456824,
+            "elevation": 20
+        }
+    ]
+}

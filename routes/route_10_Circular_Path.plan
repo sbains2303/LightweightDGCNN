@@ -1,0 +1,46 @@
+{
+    "route_name": "Route 10: Circular Path",
+    "description": "Flight path going Circular Path for 5 minutes.",
+    "waypoints": [
+        {
+            "lat": 47.3972798,
+            "lon": 8.5476220,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3960755,
+            "lon": 8.5484388,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3953751,
+            "lon": 8.5464965,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3953137,
+            "lon": 8.5443546,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3956330,
+            "lon": 8.5423942,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3971566,
+            "lon": 8.5418133,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3982381,
+            "lon": 8.5434469,
+            "elevation": 20
+        },
+        {
+            "lat": 47.3978817,
+            "lon": 8.5453891,
+            "elevation": 20
+        }
+    ]
+}
