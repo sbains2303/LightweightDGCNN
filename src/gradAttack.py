@@ -50,11 +50,13 @@ async def attack_mission(drone, drift_distance, time_factor):
     print(f"Current waypoint before modification {current_wp}")
     print(f"Modifying waypoints from index {current_wp} onwards...")
 
+    current_time_factor = time_factor + (idx * 0.5)
+    
     for idx in range(current_wp, num_waypoints): 
         mission_item = mission_items[idx]
         new_lat, new_lon, new_alt = sin_drift(
             mission_item.latitude_deg, mission_item.longitude_deg,
-            mission_item.relative_altitude_m, drift_distance, time_factor, num_waypoints
+            mission_item.relative_altitude_m, drift_distance, current_time_factor, num_waypoints
         )
 
         adjusted_speed = calculate_speed_adjustment(mission_item.speed_m_s, num_waypoints)
