@@ -14,10 +14,10 @@ The approach involves converting UAV sensor data from Gazebo mission simulations
 
 ## 📂 Repository Structure
 ```
-├── README.md               # Project overview (this file)
-├── routes/                 # Contains UAV mission plans
+├── README.md                      # Project overview (this file)
+├── routes/                        # Contains UAV mission plans
 ├── src/ 
-│   ├── models/             # Model definitions
+│   ├── models/                    # Model definitions
 │   │   ├── cnn.py
 │   │   ├── gat.py
 │   │   ├── gcn.py
@@ -26,11 +26,15 @@ The approach involves converting UAV sensor data from Gazebo mission simulations
 │   │   ├── attention.py
 │   │   ├── highway.py
 │   │   └── glu.py
-│   ├── compare.py          # Code for comparing model performance
-│   ├── configure.py        # Centralised configuration (e.g., batch size, learning rate)
-│   ├── gradAttack.py       # Adversarial gradual attack script
-│   ├── graphCons.py        # Graph construction with temporal and spatial edges
-│   └── mission.py          # MAVSDK mission flight control and sensor collection
+│   ├── prep/                      # Data preprocessing and augmentation
+│   │   ├── clean.py               # Algorithm to find missing values 
+│   │   ├── impute.py              # KNN imputation
+│   │   └── prepare_augment.py     # Noise-based data augmentation
+│   ├── compare.py                 # Code for comparing model performance
+│   ├── configure.py               # Centralised configuration (e.g., batch size, learning rate)
+│   ├── gradAttack.py              # Adversarial gradual attack script
+│   ├── graphCons.py               # Graph construction with temporal and spatial edges
+│   └── mission.py                 # MAVSDK mission flight control and sensor collection
 ```
 ---
 
@@ -45,6 +49,17 @@ All experimental settings are managed centrally via `configure.py`, including:
 - Device selection (CPU/GPU)
 - Dropout etc
 
+---
+
+### 🧹 Data Processing & Preparation
+Located in `src/prep`, this stage ensures that the dataset is clean, complete, and augmented for robust model training:
+
+- `clean.py` – Scans the dataset to identify and standardize missing values (sets them as NaN).
+- `impute.py` – Applies K-Nearest Neighbours (KNN) imputation to fill missing values based on feature similarity.
+- `prepare_augment.py` – Augments training data by injecting controlled noise to improve model generalization and resilience.
+
+---
+
 ### 🧠 Model Architectures
 Located in `src/models`, this project includes implementations of:
 
@@ -52,12 +67,14 @@ Located in `src/models`, this project includes implementations of:
 - **GCN / GAT / GNN** – Classical graph neural networks  
 - **DGCNN Variants** – Dynamic Graph CNNs with lightweight, attention, highway, and GLU variants  
 
-These models are the ones stated in the dissertation for comparison.
+---
 
 ### 📊 Evaluation & Comparison
 `compare.py` handles logging and comparison of evaluation metrics (e.g., accuracy, F1-score).
 - A custom early stopping mechanism is applied based on validation loss trends.
 - The latencies of each model is measured in this file.
+
+---
 
 ### ⚔️ Adversarial Attack Implementation
 - `gradAttack.py` provides a sinusoidal drift attack which is deployed to simulate subtle adversaries.
