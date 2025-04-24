@@ -8,7 +8,7 @@ This repository contains the main codebase for a project focused on **subtle spo
 
 ## 🧠 Project Overview
 
-The approach involves converting UAV sensor data from Gazebo mission simulations into graph-based representations and applying a range of graph neural network (GNN) models to perform classification. The models were evaluated on their ability to generalize across different mission types and route complexities as well as latency outputs.
+The approach involves converting UAV sensor data from Gazebo mission simulations into graph-based representations and applying a range of graph neural network (GNN) models and a convolutional neural network (CNN) model to perform classification. On top of this, four unique models (namely `lightweightDGCNN.py`, `attention.py`, `glu.py`, and `highway.py`) are developed to investigate whether they are able to outperform the others in terms of accuracy. The models were evaluated on their ability to generalize across different mission types and route complexities as well as latency outputs.
 
 ---
 
@@ -22,7 +22,7 @@ The approach involves converting UAV sensor data from Gazebo mission simulations
 │   │   ├── gat.py
 │   │   ├── gcn.py
 │   │   ├── gnn.py
-│   │   ├── lightweightdgcnn.py
+│   │   ├── lightweightDGCNN.py
 │   │   ├── attention.py
 │   │   ├── highway.py
 │   │   └── glu.py
