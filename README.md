@@ -2,7 +2,7 @@
 
 This repository contains the main codebase for a project focused on **subtle spoofing detection of UAV (Unmanned Aerial Vehicle) missions** using deep learning. The primary aim is to detect anomalies or patterns in sensor behaviors by modeling sensor entries as graph-structured data and evaluating various neural architectures.
 
-> ⚠️ This repository **does not include the UAV sensor dataset**, as it is private. The purpose of this codebase is to demonstrate the main project structure and logic used in the dissertation.
+> ⚠️ This repository **does not include the UAV sensor dataset**, as it is private. The purpose of this codebase is to demonstrate the main project structure and logic used in this research.
 
 ---
 
