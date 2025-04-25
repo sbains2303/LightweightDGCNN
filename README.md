@@ -31,7 +31,7 @@ The approach involves converting UAV sensor data from Gazebo mission simulations
 │   │   ├── impute.py              # KNN imputation
 │   │   └── prepare_augment.py     # Noise-based data augmentation
 │   ├── compare.py                 # Code for comparing model performance
-│   ├── configure.py               # Centralised configuration (e.g., batch size, learning rate)
+│   ├── configure.py               # Centralised configuration (e.g. batch size, learning rate)
 │   ├── gradAttack.py              # Adversarial gradual attack script
 │   ├── graphCons.py               # Graph construction with temporal and spatial edges
 │   └── mission.py                 # MAVSDK mission flight control and sensor collection
