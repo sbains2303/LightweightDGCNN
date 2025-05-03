@@ -103,5 +103,5 @@ This table provides an overview of each model's **classification performance** a
 
 ---
 
-### 🚀 Future Work
+## 🚀 Future Work
 *Ongoing work is focused on transitioning from graph-level classification to node-level classification, where individual sensor entries are classified to detect spoofing. This shift aims to extend the approach towards real-world deployment by improving granularity in anomaly detection.*
