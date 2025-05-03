@@ -20,9 +20,6 @@ def sin_drift(lat, lon, alt, drift_distance, time_factor, num_waypoints=1):
     sinusoidal_drift = math.sin(time_factor * math.pi) * 0.0001
     random_drift = random.uniform(-0.00005, 0.00005)
 
-    if num_waypoints == 1:
-        sinusoidal_drift *= 2
-
     drift = drift_distance + sinusoidal_drift + random_drift
     new_lat = lat + drift * math.cos(time_factor)
     new_lon = lon + drift * math.sin(time_factor)
