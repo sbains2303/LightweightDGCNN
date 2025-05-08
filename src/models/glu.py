@@ -4,7 +4,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.nn import MessagePassing, knn_graph, global_max_pool, global_mean_pool
 from ..configure import Config
-from lightweightDGCNN import TempEdgeConv
 
 class GatedLinearUnit(nn.Module):
     def __init__(self, in_dim, out_dim):
@@ -48,8 +47,8 @@ class GlueEdgeDGCNN(nn.Module):
             nn.Dropout(Config.dropout)
         )
 
-        self.conv1 = TempEdgeConv(Config.hidden_dim, Config.hidden_dim)
-        self.conv2 = TempEdgeConv(Config.hidden_dim, Config.hidden_dim)
+        self.conv1 = GLUedgeConv(Config.hidden_dim, Config.hidden_dim)
+        self.conv2 = GLUedgeConv(Config.hidden_dim, Config.hidden_dim)
 
         self.final_gated = nn.Sequential(
             GatedLinearUnit(Config.hidden_dim * 2 * 2, Config.hidden_dim),
