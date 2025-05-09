@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.nn import MessagePassing, knn_graph, global_max_pool, global_mean_pool
-from ..configure import Config
+from ..configure import Config, create_spatiotemporal_edges
 
 class GatedLinearUnit(nn.Module):
     def __init__(self, in_dim, out_dim):
@@ -31,7 +31,7 @@ class GLUedgeConv(MessagePassing):
         return self.gated_mlp(edge_features)
 
     def forward(self, x, batch, feature):
-        edge_index = knn_graph(x, k=self.k, batch=batch, loop=False, flow=self.flow, cosine=False)
+        edge_index = create_spatiotemporal_edges(x, batch, self.k, Config.temporal_window)
         return self.propagate(edge_index, x=x, feature=feature) + x
 
 class GlueEdgeDGCNN(nn.Module):
