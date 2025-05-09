@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.nn import MessagePassing, knn_graph, global_max_pool
-from ..configure import Config
+from ..configure import Config, create_spatiotemporal_edges
 
 class AttentionEdgeConv(MessagePassing):
     def __init__(self, in_channels, out_channels, k=5):
@@ -28,7 +28,8 @@ class AttentionEdgeConv(MessagePassing):
         # Skip connection handling
         self.skip_lin = nn.Linear(in_channels, out_channels) if in_channels != out_channels else nn.Identity()
 
-    def forward(self, x, edge_index, key_feature):
+    def forward(self, x, edge_index, key_feature, batch):
+        edge_index = create_spatiotemporal_edges(x, batch, self.k, Config.temporal_window)
         out = self.propagate(edge_index, x=x, key_feature=key_feature)
         return out + self.skip_lin(x)
 
