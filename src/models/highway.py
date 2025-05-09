@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.nn import MessagePassing, knn_graph
 from torch_geometric.nn import global_max_pool
-from ..configure import Config
+from ..configure import Config, create_spatiotemporal_edges
 
 class HighwayEdgeConv(MessagePassing):
     def __init__(self, in_channels, out_channels, k=5):
@@ -27,11 +27,10 @@ class HighwayEdgeConv(MessagePassing):
         # Skip connection projection if dimensions don't match
         self.skip_lin = nn.Linear(in_channels, out_channels) if in_channels != out_channels else nn.Identity()
 
-    def forward(self, x, edge_index, feature):
-        # Propagate messages
+    def forward(self, x, batch, feature):
+        edge_index = create_spatiotemporal_edges(x, batch, self.k, Config.temporal_window)
         out = self.propagate(edge_index, x=x, feature=feature)
-        # Skip connection with potential projection
-        return out + self.skip_lin(x)
+        return out + self.skip_lin(x)  # Add skip connection
 
     def message(self, x_i, x_j, feature_i, feature_j):
         feature_diff = feature_i - feature_j
