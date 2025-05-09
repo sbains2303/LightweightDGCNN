@@ -77,9 +77,8 @@ class HighwayDGCNN(nn.Module):
         x = self.initial_mlp(features)
         
         # Create dynamic graph
-        edge_index = knn_graph(x, k=self.k, batch=batch, loop=False)
-        x1 = F.leaky_relu(self.conv1(x, edge_index, key_feature), negative_slope=0.2)
-        x2 = F.leaky_relu(self.conv2(x1, edge_index, key_feature), negative_slope=0.2)
+        x1 = F.leaky_relu(self.conv1(x, batch, key_feature), negative_slope=0.2)
+        x2 = F.leaky_relu(self.conv2(x1, batch, key_feature), negative_slope=0.2)
         
         x_combined = torch.cat([x1, x2], dim=1)
         out = global_max_pool(x_combined, batch)
