@@ -1,5 +1,5 @@
 # Final model using TSGConv (Temporal Graph Convolution) - acc_tr=  93, acc_te=  93, lat = 1917.08 ms
-from ..configure import Config
+from ..configure import Config, create_spatiotemporal_edges
 from torch_geometric.nn import MessagePassing, knn_graph, global_max_pool, global_mean_pool
 import torch
 import torch.nn as nn
@@ -19,10 +19,9 @@ class TempEdgeConv(MessagePassing):
         )
     
     def forward(self, x, batch, key_feature):
-        edge_index = knn_graph(x, k=self.k, batch=batch, loop=False, 
-                              flow=self.flow, cosine=False)  
+        edge_index = create_spatiotemporal_edges(x, batch, self.k, Config.temporal_window)
+        return self.propagate(edge_index, x=x, key_feature=key_feature) + x
         
-        return self.propagate(edge_index, x=x, key_feature=key_feature) + x 
     def message(self, x_i, x_j, key_feature_i, key_feature_j):
         # Compute difference in features and discriminative key
         h_diff = x_j - x_i
